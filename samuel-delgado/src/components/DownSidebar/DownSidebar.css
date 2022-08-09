@@ -1,0 +1,8 @@
+.down-sidebar{
+    border: 1px solid blue;
+    width: 5%;
+    height: 120px;
+    position: absolute;
+    z-index: 400;
+    background-color: aqua;
+}
