@@ -1,8 +1,21 @@
 .down-sidebar{
-    border: 1px solid blue;
-    width: 5%;
-    height: 120px;
     position: absolute;
-    z-index: 400;
-    background-color: aqua;
+    width: 164px;
+    height: 300px;
+    top: 12px;
+    z-index: 2;
+    background-color: #ff5d54;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    padding-top: 12px;
+    border-top-right-radius: 24px;
+}
+
+.shop-logo{
+    position: relative;
+    width: 50%;
+    height: auto;
+    box-shadow: none !important;
+
 }

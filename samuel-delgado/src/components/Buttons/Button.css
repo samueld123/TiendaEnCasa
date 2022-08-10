@@ -14,11 +14,10 @@
     opacity: 1;
 }
 
-p{
+.button-copy{
     color: white;
     font-size: 18px;
-    font-family: 'Roboto';
-    font-weight: bold;
+    font: normal normal bold 16px/21px Roboto;
     text-transform: uppercase;
     background: none;
 }

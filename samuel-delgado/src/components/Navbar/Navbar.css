@@ -1,23 +1,16 @@
-.back-side {
-    border: 1px solid blue;
-    width: 7%;
-    height: 120px;
-    position: initial;
-    z-index: 1;
-    background-color: #ff5d54;
-}
+
 
 .nav-menu {
     /* border: 1px solid blue; */
     background: #ffffff;
     border-radius: 0px 40px 0px 0px;
     width: 184px;
-    height: 710px;
+    height: 91%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: absolute;
-    top: 200px;
+    top: 5.5em;
     /* left: -100%; */
     z-index: 2;
     transition: 850ms;
@@ -96,6 +89,7 @@ img{
 
 
 .buttons{
+    margin-bottom: 15px;
     background: white;
     display: grid;
     row-gap: 15px;

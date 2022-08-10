@@ -4,7 +4,7 @@ import './Button.css'
 const Button = ({copy}) => {
   return (
     <div className='button'>
-        <p>{copy}</p>
+        <p className='button-copy'>{copy}</p>
     </div>
   )
 }
