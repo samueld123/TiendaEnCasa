@@ -2,14 +2,30 @@ import './AddRemove.css';
 import React from 'react'
 import * as FaIcons from "react-icons/fa";
 
-const AddRemove = () => {
+const AddRemove = ({amount,setamount, product}) => {
+  let canAdd = amount<product.quantity
+  let canSubstract = amount>0 
+  let add = ()=>{
+    if(amount==product.quantity){
+      amount=product.quantity
+    }
+    else{
+      setamount(amount+1)
+    }
+  }
+  let substract = ()=>{
+    if(amount >0){
+      setamount(amount-1)
+    }
+    
+  }
   return (
-    <div className='add-remove-buttons'>
-        <button className='op-button'><FaIcons.FaMinus/></button>
+    <div className='add-remove-buttons '>
+        <button className={`minus-button ${canSubstract ? "minus_clickable": null } `} onClick={substract} ><FaIcons.FaMinus/></button>
         <div className='count-wrapper'>
-            <p className='count-number'>2</p>
+            <p className='count-number'>{amount}</p>
         </div>
-        <button className='op-button'><FaIcons.FaPlus/></button>
+        <button className={`add-button ${canAdd ? "add_clickable": null } `} onClick={add}><FaIcons.FaPlus/></button>
         
     </div>
   )

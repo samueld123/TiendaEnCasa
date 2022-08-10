@@ -2,6 +2,7 @@ import './RightSidebar.css';
 import React from 'react'
 import Button from '../Buttons/Button';
 import * as BsIcons from "react-icons/bs";
+import CartItem from '../CartItem/CartItem';
 
 const RightSidebar = () => {
   return (
@@ -21,7 +22,13 @@ const RightSidebar = () => {
             </div>
         </div>
         <div className='bar-mid'>
-
+            <CartItem/>
+            <CartItem/>
+            <CartItem/>
+            <CartItem/>
+            <CartItem/>
+            <CartItem/>
+            <CartItem/>
         </div>
         <div className='bar-bottom'>
             <div className='input-number'>

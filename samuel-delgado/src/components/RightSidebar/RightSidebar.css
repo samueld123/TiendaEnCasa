@@ -76,31 +76,9 @@
 
 .bar-mid{
     /* border: 1px solid red; */
-    overflow-y: scroll;
-    /* height: auto; */
+    overflow-y: auto;
+    height: auto;
 }
-
-/* width */
-::-webkit-scrollbar {
-    width: 2px;
-    box-shadow: 0px 3px 6px #00000029;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: none;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 24px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
 
 .bar-bottom{
     /* border: 1px solid orange; */
