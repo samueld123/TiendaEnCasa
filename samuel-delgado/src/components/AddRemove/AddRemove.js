@@ -1,31 +1,32 @@
 import './AddRemove.css';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+// import React from 'react'
 import * as FaIcons from "react-icons/fa";
 
-const AddRemove = ({amount,setamount, product}) => {
-  let canAdd = amount<product.quantity
-  let canSubstract = amount>0 
+
+const AddRemove = ({product, onAdd, onRemove, quan}) => {
+  // let canAdd = amount<product.quantity
+
   let add = ()=>{
-    if(amount==product.quantity){
-      amount=product.quantity
-    }
-    else{
-      setamount(amount+1)
-    }
+    
+    product.quantity+=1;
+    
   }
   let substract = ()=>{
-    if(amount >0){
-      setamount(amount-1)
+    if(product.quantity >0){
+      product.quantity=product.quantity-1;
     }
     
   }
   return (
     <div className='add-remove-buttons '>
-        <button className={`minus-button ${canSubstract ? "minus_clickable": null } `} onClick={substract} ><FaIcons.FaMinus/></button>
+        <button className={"minus-button minus_clickable"} onClick={()=> {onRemove(product, true); substract();}} ><FaIcons.FaMinus/></button>
         <div className='count-wrapper'>
-            <p className='count-number'>{amount}</p>
+            <p className='count-number'>{/*product.quantity*/}</p>
+
         </div>
-        <button className={`add-button ${canAdd ? "add_clickable": null } `} onClick={add}><FaIcons.FaPlus/></button>
+        {/* <button className={`add-button ${canAdd ? "add_clickable": null } `} onClick={()=> {onAdd(product); add();}}><FaIcons.FaPlus/></button> */}
+        <button className='add-button add_clickable' onClick={()=> {onAdd(product); add();}}><FaIcons.FaPlus/></button>
         
     </div>
   )

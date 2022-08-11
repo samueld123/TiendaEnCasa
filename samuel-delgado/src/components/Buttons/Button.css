@@ -1,17 +1,24 @@
 .button{
-    border: 1px solid red;
-    color: black;
     display: flex;
     width: 148px;
     height: 52px;
-    background: #ff5d54;
+    background: #d8d8d8;
     align-items: center;
     justify-content: center;
-    background: var(--unnamed-color-ff5d54) 0% 0% no-repeat padding-box;
-    background: #FF5D54 0% 0% no-repeat padding-box;
+    /* background: var(--unnamed-color-ff5d54) 0% 0% no-repeat padding-box; */
+    /* background: #FF5D54 0% 0% no-repeat padding-box; */
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 30px;
     opacity: 1;
+}
+
+.clickable{
+    background: #ff5d54;
+
+}
+
+.clickable:hover{
+    cursor:pointer;
 }
 
 .button-copy{

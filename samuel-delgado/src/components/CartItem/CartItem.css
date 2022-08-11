@@ -43,6 +43,10 @@
     justify-content: center;
 }
 
+.cart-item-cancel:hover{
+    cursor: pointer;
+}
+
 /* .cart-item-quantity{
     margin-left: 4px;
     background: none;

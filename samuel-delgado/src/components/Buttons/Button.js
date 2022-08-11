@@ -1,9 +1,9 @@
 import React from 'react'
 import './Button.css'
 
-const Button = ({copy}) => {
+const Button = ({copy, able=true}) => {
   return (
-    <div className='button'>
+    <div className={`button ${able ? "clickable":null}`}>
         <p className='button-copy'>{copy}</p>
     </div>
   )
