@@ -1,12 +1,14 @@
 import React from 'react'
-import Navbar from '../Navbar/Navbar';
 import './Header.css';
+import * as FaIcons from "react-icons/fa";
 
-const Header = () => {
+const Header = ({title}) => {
   return (
     
     <div className='header'>
-      <h1>Ventas</h1>
+      <FaIcons.FaChevronLeft className='back'/>
+      <h1>{title}</h1>
+      <hr className='dashed-title'/>
     </div>
   )
 }

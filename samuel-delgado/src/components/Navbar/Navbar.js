@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import * as FaIcons from "react-icons/fa";
-import { Link } from 'react-router-dom';
 import { SidebarData } from './SidebarData'
 import './Navbar.css'
 import Button from '../Buttons/Button';
@@ -28,12 +27,10 @@ function Navbar() {
                         return (
                             <li key={index} className={item.cName}>
                                 {console.log(item.cName)}
-                                {/* <Link to={item.path}> */}
                                     
                                     {item.icon}
                                     <span>{item.title}</span>
                                     
-                                {/* </Link> */}
                             </li>
                         )
                     })}

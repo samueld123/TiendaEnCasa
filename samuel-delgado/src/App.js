@@ -1,15 +1,11 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import React, { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header';
 import DownSidebar from './components/DownSidebar/DownSidebar';
-import Search from './components/Search/Search';
 import RightSidebar from './components/RightSidebar/RightSidebar';
 import ProductContainer from './components/ProductContainer/ProductContainer';
-import DataFetching from './components/DataFetching/DataFetching';
 import axios from 'axios';
-import AddRemove from './components/AddRemove/AddRemove';
 import * as FaIcons from "react-icons/fa";
 
 
@@ -66,10 +62,7 @@ function App() {
 
   return (
     <>
-      {/* <Products/> */}
-      {/* <DataFetching/> */}
-      {/* <Search/> */}
-      <Header/>
+      <Header title="Ventas"/>
       <div className='bar-container'>
         <div className='bar-search'>
           <input placeholder='Buscar Producto' 
@@ -81,9 +74,8 @@ function App() {
       </div>
       <DownSidebar/>
       <Navbar/>
-      <RightSidebar cartItems={cartItems} onDelete={onDelete}/>
+      <RightSidebar cartItems={cartItems} onDelete={onDelete} />
         
-        {/* onRemove={onRemove} */}
 
       <div className='products'>  
         {
@@ -96,28 +88,8 @@ function App() {
           }).map((item)=>(
             <ProductContainer key ={item.id} product={item} onAdd={onAdd} onRemove={onRemove}></ProductContainer>
           ))
-          // items.map((item)=>(
-          //   <ProductContainer key ={item.id} product={item} onAdd={onAdd} onRemove={onRemove}></ProductContainer>
-          // ))
         }
-      </div>
-
-      {/* <main>
-        <Content
-          items={items.filter}
-      </main> */}
-      
-      {/* <Router> */}
-        {/* <Header/>
-        <Navbar/> */}
-        {/* <DownSidebar/> */}
-
-        {/* <Routes> */}
-          {/* <Route path='/' />
-        </Routes>
-      </Router> */}
-    
-      
+      </div>    
     </>
   );
 }

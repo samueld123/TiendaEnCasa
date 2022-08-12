@@ -53,11 +53,39 @@
 }
 
 .total{
+    /* border: 1px solid black; */
     width: 100%;
     height: 64px;
     background-color: #efefef;
-    display: grid;
-    padding-top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-between;
+    /* flex-flow: wrap; */
+    /* padding-top: 3px; */
+}
+
+.dashed-total{
+    position: absolute;
+    top: 116px;
+    border:none;
+    border-top:1.5px dashed #f20000;
+    color:#fff;
+    background-color: none;
+    width:80%;
+    opacity: 1;
+}
+
+.dashed-total-bottom{
+    position: absolute;
+    top: 179px;
+    border:none;
+    border-top:1.5px dashed #f20000;
+    color:#fff;
+    background-color: none;
+    width:80%;
+    opacity: 1;
 }
 
 .total-title{
@@ -129,3 +157,76 @@ input{
 ::placeholder{
     color: #ff5d54;
 }
+
+.curtain{
+    background-color: rgba(128,128,128,0.568);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.content{
+    background-color: white;
+    height: 364px;
+    width: 464px;
+    /* display: block; */
+    overflow: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 16px;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal-title{
+    text-align: center;
+    font: normal normal bold 28px/34px Nunito;
+    letter-spacing: 0px;
+    color: #404040;
+    opacity: 1;
+}
+
+.modal-check{
+    opacity: 1;
+    font-size: 100px;
+    color: #ff5d54;
+}
+
+.copy-container{
+    width: 304px;
+}
+
+.modal-copy{
+    width: 100%;
+    text-align: center;
+    font: normal normal normal 14px/22px Roboto;
+    letter-spacing: 0px;
+    color: #404040;
+    opacity: 1;
+}
+
+.ok-button{
+    display: flex;
+    width: 304px;
+    height: 52px;
+    background: #d8d8d8;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 30px;
+    opacity: 1;
+    background-color: #ff5d54;
+}
+
+.ok-button:hover{
+    cursor: pointer;
+}
+

@@ -1,11 +1,9 @@
 import './AddRemove.css';
 import React, { useEffect, useState } from 'react'
-// import React from 'react'
 import * as FaIcons from "react-icons/fa";
 
 
 const AddRemove = ({product, onAdd, onRemove, quan}) => {
-  // let canAdd = amount<product.quantity
 
   let add = ()=>{
     
@@ -25,7 +23,6 @@ const AddRemove = ({product, onAdd, onRemove, quan}) => {
             <p className='count-number'>{/*product.quantity*/}</p>
 
         </div>
-        {/* <button className={`add-button ${canAdd ? "add_clickable": null } `} onClick={()=> {onAdd(product); add();}}><FaIcons.FaPlus/></button> */}
         <button className='add-button add_clickable' onClick={()=> {onAdd(product); add();}}><FaIcons.FaPlus/></button>
         
     </div>
